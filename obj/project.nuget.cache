@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "StGUQ41O0GSjUAlasoS52LIFkHmgwYeQ9bZ4+I8TDLNGRq3mjOQwi153gSeT2LpLTL0PxFbPwefFza/kjCpN4g==",
+  "success": true,
+  "projectFilePath": "D:\\Asp_Projects\\TestSharp2\\TestApp\\TestApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+  ],
+  "logs": []
+}
