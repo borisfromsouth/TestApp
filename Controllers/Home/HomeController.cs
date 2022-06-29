@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using TestApp.Models;
 
 namespace TestApp.Controllers.Home
@@ -110,14 +111,23 @@ namespace TestApp.Controllers.Home
             //var names = new[] { "Kayak", "Lifejacket", "Soccer ball" };
             //return View(names);
 
+            //var products = new[]
+            //{
+            //        new { Name = "Kayak", Price = 275M },
+            //        new { Name = "LifeJacket", Price = 48.95M },
+            //        new { Name = "Soccer ball", Price = 19.50M },
+            //        new { Name = "Corner Flag", Price = 34.95M }
+            //    };
+            //return View(products.Select(p => p.GetType().Name));
+
             var products = new[]
             {
-                new { Name = "Kayak", Price = 275M },
-                new { Name = "LifeJacket", Price = 48.95M },
-                new { Name = "Soccer ball", Price = 19.50M },
-                new { Name = "Corner Flag", Price = 34.95M }
-            };
-            return View(products.Select(p => p.GetType().Name));
+                    new { Name = "Kayak", Price = 275M },
+                    new { Name = "LifeJacket", Price = 48.95M },
+                    new { Name = "Soccer ball", Price = 19.50M },
+                    new { Name = "Corner Flag", Price = 34.95M }
+                };
+            return View(products.Select(p => $"{nameof(p.Name)}: {p.Name}, {nameof(p.Price)}: {p.Price}")) ;
 
             List<string> results = new List<string>();
             foreach (Product p in Product.GetProducts())
@@ -131,5 +141,11 @@ namespace TestApp.Controllers.Home
             }
             return View(results);
         }
+
+        //public async Task<ViewResult> Index()
+        //{
+        //    long? length = await MyAsyncMethods.GetPageLength();
+        //    return View(new string[] { $"Length: {length}" });
+        //}
     }
 }
